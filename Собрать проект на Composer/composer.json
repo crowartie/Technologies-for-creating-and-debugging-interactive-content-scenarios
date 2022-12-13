@@ -1,0 +1,11 @@
+{
+    "require": {
+        "illuminate/database": "^9.43",
+        "watson/rememberable": "^6.0",
+        "phpoffice/phpspreadsheet": "^1.25",
+        "tecnickcom/tcpdf": "^6.6",
+        "twilio/sdk": "^6.43",
+        "symfony/mailer": "^6.2"
+    }
+    
+}
