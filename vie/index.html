@@ -1,0 +1,46 @@
+<html>
+	<head>
+	<link href="style.css" type="text/css" rel="stylesheet" >
+	
+	
+	</head>
+	<body>
+		<div class="mainContainer">
+			<h1 class="labelApp">Управление пользовательскими заметками</h1>
+			<div class="boxContain"id="app">
+			<script src="https://unpkg.com/vue@next"></script>
+				<form>
+					<input type="text" class="inText" v-bind:value="valueInput" v-on:input="handlerInput" v-on:keypress.enter="addTask"/>
+					<button type="submit" class="add" v-on:click="addTask">Добавить</button>
+				</form>
+				<h3>Не выполненные задачи:</h3>
+				<div class="noCompleteTasks boxTask">
+					<ul>
+						<li v-for="(mask, index) in arrNoCompleteTasks" :key="mask.id">
+							<div class="containText">
+								<input class="checkComplete" type="checkbox" value="" aria-label="..." v-on:change="doCheck(index, 'need')"/> {{ mask.title }}
+							</div>
+                            <a href="#!" data-mdb-toggle="tooltip" v-on:click="removeMask(index, 'need')">Удалить</a>
+						</li>
+					</ul>
+				</div>
+				<h3>Выполненные задачи:</h3>
+				<div class="completeTasks boxTask">
+					<ul>
+						<li v-for="(mask, index) in arrCompleteTasks" :key="mask.id">
+                            <div class="containText">
+                                <input class="checkNoComplete" type="checkbox" value="" aria-label="..." v-on:change="doCheck(index, 'complete')" checked /><del>{{ mask.title }}</del>
+                                        </div>
+                                        <a href="#!" data-mdb-toggle="tooltip" title="Remove item"
+                                            v-on:click="removeMask(index, 'complete')">
+                                            Удалить
+                                        </a>
+                                    </li>
+</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="v.js"></script>
+</html>

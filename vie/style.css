@@ -1,0 +1,28 @@
+.labelApp{
+	color: #7B7460;
+}
+.inText{
+	width:340px;
+}
+.boxTask{
+
+	width:416px;
+}
+.checkComplete{
+	text-align:left;
+}
+a{
+	text-align:right;
+}
+li{
+	display: flex;
+	flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  border:1px solid #7B7460;
+  margin-bottom:8px;
+}
+.containText{
+	margin-left:0px;
+}
